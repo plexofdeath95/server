@@ -53,6 +53,7 @@ const npcInteractionActionPipe = (player: Player, npc: Npc, position: Position, 
 
 
 
+
     const morphedNpc = player.getMorphedNpcDetails(npc);
 
     // Find all NPC action plugins that reference this NPC
@@ -61,7 +62,7 @@ const npcInteractionActionPipe = (player: Player, npc: Npc, position: Position, 
             (!plugin.npcs || stringHookFilter(plugin.npcs, morphedNpc?.key || npc.key)) &&
             (!plugin.options || stringHookFilter(plugin.options, option)));
     const questActions = matchingHooks.filter(plugin => plugin.questRequirement !== undefined);
-    
+
 
     if(questActions.length !== 0) {
         matchingHooks = questActions;

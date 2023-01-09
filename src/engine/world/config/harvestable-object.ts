@@ -143,7 +143,7 @@ const Ores: IHarvestable[] = [
         respawnLow: 5,
         respawnHigh: 10,
         baseChance: 70,
-        break: 100
+        break: 100,
     },
     {
         objects: COPPER_OBJECTS,
